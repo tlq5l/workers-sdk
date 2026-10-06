@@ -1,5 +1,12 @@
 # @cloudflare/vitest-plugin
 
+## 1.3.8
+
+### Patch Changes
+
+- Updated dependencies [[`9a58244`](https://github.com/cloudflare/workers-sdk/commit/9a58244a919289f9a8f3c7a81d410a52b96a9136)]:
+  - wrangler@4.149.0
+
 ## 1.3.7
 
 ### Patch Changes
