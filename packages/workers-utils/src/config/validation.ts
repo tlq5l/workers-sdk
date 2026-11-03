@@ -3816,6 +3816,11 @@ function validateSshPublicKeys(
 			diagnostics.errors.push(
 				`${fieldPath}.public_key is an unsupported key type. Please provide an ED25519 public key.`
 			);
+		} else if (key.public_key.trim().split(" ").filter(Boolean).length > 3) {
+			// The API splits a key on spaces into "type body comment", so a comment with a space is rejected; a tab is accepted.
+			diagnostics.errors.push(
+				`${fieldPath}.public_key has spaces in its comment. Use a one-word comment or none.`
+			);
 		}
 	}
 }
